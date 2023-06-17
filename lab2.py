@@ -15,14 +15,18 @@ if a + b >= c:
 else:
     print("Треугольник с такими сторонами не существует:", a, b, c)
 
-n="6"
+n="12"
 if n[0]=="1" and len(n)==1:
     print("мне", n, " год")
 elif n[0] <= "4" and len(n) == 1:
     print("мне", n, " годa")
-elif len(n)==2 and n[1]=="1" and n[0]!="1":
+elif len(n)>2 and n[1]=="1" and n[0]!="1":
     print("мне", n, " год")
-elif len(n)==2 and n[1] <= "4" and n[0]!="1" :
+elif len(n)>2 and n[1] <= "4" and n[0]!="1":
+    print("мне", n, " годa")
+elif len(n)>2 and n[2]=="1":
+    print("мне", n, " год")
+elif len(n)>2 and n[2] <= "4":
     print("мне", n, " годa")
 else:
     print("мне", n, " лет")
