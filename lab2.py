@@ -1,18 +1,5 @@
-int_1=1
-int_2=2
-str_1="1"
-str_2="2"
-float_1=1.1
-float_2=2.2
-bool_1=True
-bool_2=False
-none=None
-print("int_1:",type(int_1))
-print("int_2:",type(int_2))
-print("str_1:",type(str_1))
-print("str_2:",type(str_2))
-print("float_1:",type(float_1))
-print("float_2:",type(float_2))
-print("bool_1:",type(bool_1))
-print("bool_2:",type(bool_2))
-print("none:",type(none))
+#У переменной str=”123” изменить тип данных со строкового в числовой.
+#Показать результат с помощью функции type().
+str="123"
+str_int=int(str)
+print(type(str_int))
