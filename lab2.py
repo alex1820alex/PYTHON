@@ -2,15 +2,14 @@
 # Например, если на ввод поступило число 6, то вывод должен содержать шесть первых чисел ряда Фибоначчи: 1 2 3 5 8 13.
 #2. Вычислить факториал введённого числа.
 try:
-    int_1=int(input("Введите совершенное число"))
-    sovershen=0
+    int_1=int(input("Введите число"))
+    prost=0
     for i in range(1,int_1):
-        if(int_1%i==0):
-            sovershen+=i
-    print(sovershen)
-    if sovershen==int_1:
-        print(int_1,"-совершенное число")
-    else:
-        print(int_1, "-не совершенное число")
+        prost = 0
+        for j in range(1,i+1):
+            if(i%j==0):
+                prost+=1
+        if prost == 2:
+            print(i)
 except ValueError:
-    print("Введите совершенное число")
+    print("Введите  число")
