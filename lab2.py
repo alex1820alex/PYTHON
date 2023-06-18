@@ -1,9 +1,8 @@
-try:
-    int_1=int(input("Введите трехзначное число"))
-    if 100<int_1<1000:
-        summa=int(str(int_1)[0])+int(str(int_1)[1])+int(str(int_1)[2])
-        print("Сумма трех цифр числа:",summa)
-    else:
-        print("Не трехзначное число")
-except ValueError:
-    print("Введите число")
+#Известны год, номер месяца и день рождения каждого из двух человек. Определить, кто из них старше.
+from datetime import date
+data_1=date(2000,5,22)
+data_2=date(2000,5,20)
+if data_1>data_2:
+    print("Старше первый человек:",data_1)
+else:
+    print("Старше второй человек:",data_2)
