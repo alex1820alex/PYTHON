@@ -1,10 +1,7 @@
-#1. Найти максимальный элемент диагонали матрицы.
-#2. Вычислить количество отрицательных элементов под главной диагональю матрицы.
 import random
-m=3
-n=3
+n=int(input("Введите количество строк"))
+m=int(input("Введите количество столбцов"))
 mas=[]
-maximum=-100
 for i in range(n):
     mas_0=[]
     for j in range(m):
@@ -12,14 +9,13 @@ for i in range(n):
     mas.append(mas_0)
 for item in mas:
     print(item)
-for i in range(n):
-    for j in range(m):
-        if j == i and maximum < mas[i][j]:
-            maximum = mas[i][j]
-print(maximum)
 coust=0
 for i in range(n):
-    for j in range(m):
-        if j < i and mas[i][j]<0:
-            coust+=1
-print(coust)
+        coust=0
+        for j in range(m):
+            coust+=mas[i][j]
+            print(mas[i][j],end=" ")
+        print("=", coust)
+
+
+
