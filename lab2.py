@@ -1,54 +1,51 @@
-#1. В единственной строке записан текст. Для каждого слова из данного текста подсчитайте, сколько раз оно встречалось в этом тексте ранее.
-# Словом считается последовательность непробельных символов, идущих подряд. Слова разделены одним или большим числом пробелов или символами конца строки.
-#2. Дан текст: в первой строке задано число строк, далее идут сами строки. Выведите слово, которое в этом тексте встречается чаще всего.
-# Если таких слов несколько, выведите то, которое меньше в лексикографическом порядке.
-str_1="2\nlol keks hello keks nix pitrom\nkrim moon lol sex keks lol\n"
-str_2=""
-list_1=list()
-dict_1=list()
-key=0
-for i in range(len(str_1)):
-    if str_1[i]!=" " and str_1[i]!="\n":
-        str_2+=str_1[i]
+#1. В текстовый файл построчно записаны фамилия и имя каждого учащегося класса и их оценка за контрольную.
+# Вывести на экран всех учащихся, чья оценка меньше 3 баллов, и посчитать средний балл по классу.
+#2. Создать текстовый файл, записать в него построчно данные, которые вводит пользователь.
+# Окончанием ввода пусть служит пустая строка.
+str_1="Карасева Анастасия 2 \n" \
+      "Бондарев Герман 2 \n" \
+      "Кулагина Дарья 4 \n" \
+      "Винокурова Василиса 3 \n" \
+      "Козлова Дарина 5 \n"
+str_3=""
+sredni_bal=0
+delitel=0
+with open("text.txt","w") as file:
+    for item in str_1:
+        file.write(item)
+with open("text.txt","r") as file:
+    str_2 = file.readline()
+    while str_2:
+        for i in range(len(str_2)):
+            if str_2[i].isdigit() and int(str_2[i]) < 3:
+                for j in range(i+1):
+                    str_3 += str_2[j]
+                print(str_3)
+                str_3 = ""
+            elif str_2[i].isdigit():
+                sredni_bal+=int(str_2[i])
+        delitel += 1
+        str_2= file.readline()
+print("sredni bal po klassu",sredni_bal/delitel)
+
+
+
+
+file = open('test2.txt', 'w')
+str1=input("Введите строку:")+'\n'
+while str1:
+    file.writelines(str1)
+    str1=input("Введите строку:")
+    if not str1:
+        break
     else:
-        list_1.append(str_2)
-        str_2=""
-for item in list_1:
-    print(item,end=" ")
-print()
+        str1+="\n"
 
-set_1=set(list_1)
-for item in set_1:
-    for item_2 in list_1:
-       if item_2==item:
-           key+=1
-    dict_1.append([key,item])
-    key=0
-for item in dict_1:
-    print(item, end=" ")
-print()
-maximum=0
-for i in range(len(dict_1)):
-    if dict_1[i][0]>=maximum:
-        maximum=dict_1[i][0]
-dict_2=list()
-for item in dict_1:
-    if maximum==item[0]:
-        dict_2.append(item)
-minimum=100
-for i in range(len(dict_2)):
-    if minimum>=len(dict_2[i][1]):
-        minimum=len(dict_2[i][1])
-for i in range(len(dict_2)):
-    if minimum==len(dict_2[i][1]):
-        print(dict_2[i][1])
-
-
-
-
-
-
-
-
+file.close()
+with open('test2.txt', 'r') as file:
+    text = file.readline()
+    while text:
+        print(text,end="")
+        text = file.readline()
 
 
