@@ -1,19 +1,12 @@
-str_1="Карасева Анастасия 2\n" \
-      "Бондарев Герман 2\n" \
-      "Кулагина Дарья 4\n" \
-      "Винокурова Василиса 3\n" \
-      "Козлова Дарина 5\n"
-with open("text.txt","w") as file:
-    for item in str_1:
-        file.write(item)
-kol_strok=0
-with open("text.txt","r") as file:
-    str_2 = file.readline()
-    while str_2:
-        print("Колличество симвалов:",len(str_2),end=" ")
-        str_2=str_2.split(" ")
-        print("Колличество слов:", len(str_2))
-        str_2=file.readline()
-        kol_strok+=1
-print("kolichrstvo strok:",kol_strok)
-
+#Написать функцию, которая заполняет массив случайными числами в диапазоне, указанном пользователем.
+# Функция должна принимать два аргумента - начало диапазона и его конец, при этом ничего не возвращать.
+#Вывод значений элементов массива должен происходить в основной ветке программы.
+import random
+array=list()
+def in_array(start,end):
+    for i in range(10):
+        array.append(random.randint(start,end))
+start=int(input("Введите начало массива"))
+end=int(input("Введите конец массива"))
+in_array(start,end)
+print(array)
