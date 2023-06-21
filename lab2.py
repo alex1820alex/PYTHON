@@ -1,12 +1,17 @@
-#Написать функцию, которая заполняет массив случайными числами в диапазоне, указанном пользователем.
-# Функция должна принимать два аргумента - начало диапазона и его конец, при этом ничего не возвращать.
-#Вывод значений элементов массива должен происходить в основной ветке программы.
-import random
-array=list()
-def in_array(start,end):
-    for i in range(10):
-        array.append(random.randint(start,end))
-start=int(input("Введите начало массива"))
-end=int(input("Введите конец массива"))
-in_array(start,end)
-print(array)
+def generait_derict(str1):
+    mnojestva=set()
+    for i in range(len(str1)):
+        mnojestva.add(str1[i])
+    key=0
+    derict=dict()
+    for item in mnojestva:
+        for i in range(len(str1)):
+            if item==str1[i]:
+                key+=1
+        derict[item]=key
+        key = 0
+    for key,val in derict.items():
+        print(key,val,end=" ")
+
+str1=input("Введите строку")
+generait_derict(str1)
