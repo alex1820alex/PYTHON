@@ -1,10 +1,12 @@
-def polezn(func):
-    def warrper():
-        print("Полезная работа декоратора до")
-        func()
-        print("Полезная работа декоратора после")
-    return warrper
-@polezn
-def hello():
-    print("Hello")
-hello()
+#Написать функцию, которая просит ввести имя и выводит на экран "Привет и введённое имя".
+#Далее написать к функции декоратор, который изменяет функцию и переводит имя в заглавные буквы.
+def out(func):
+    name = input("Введите имя")
+    print("Привет ",name )
+    def warrer():
+        func(name)
+    return warrer
+@out
+def Name(name):
+    print("Привет ",name.upper())
+Name()
