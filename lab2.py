@@ -1,8 +1,10 @@
-chislo=input()
-def recurs(chislo,lens):
-    if lens>=0:
-        return int(chislo[lens])+int(recurs(chislo,lens-1))
-    else:
-        return 0
-
-print(recurs(chislo,len(chislo)-1))
+def polezn(func):
+    def warrper():
+        print("Полезная работа декоратора до")
+        func()
+        print("Полезная работа декоратора после")
+    return warrper
+@polezn
+def hello():
+    print("Hello")
+hello()
