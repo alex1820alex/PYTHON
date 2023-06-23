@@ -2,7 +2,7 @@ import random
 from abc import abstractmethod
 
 
-class animal():
+class Animal():
     @abstractmethod
     def __init__(self,name,age,sex):
         self.name=name
