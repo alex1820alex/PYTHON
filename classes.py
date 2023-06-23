@@ -1,11 +1,17 @@
 import random
+from abc import abstractmethod
+
+
 class animal():
+    @abstractmethod
     def __init__(self,name,age,sex):
         self.name=name
         self.age=age
         self.sex=sex
     def move(self,speed):
         print(self.name,"движеться со скоростью",speed)
+
+    @abstractmethod
     def _info(self):
         print(self.name,self.age,self.sex)
 
