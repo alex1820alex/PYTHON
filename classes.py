@@ -1,6 +1,4 @@
 import random
-
-
 class animal():
     def __init__(self,name,age,sex):
         self.name=name
@@ -8,10 +6,10 @@ class animal():
         self.sex=sex
     def move(self,speed):
         print(self.name,"движеться со скоростью",speed)
-    def info(self):
+    def _info(self):
         print(self.name,self.age,self.sex)
 
-    def massa(self):
+    def __massa(self):
         print(self.name,random.randint(30,60),"кг")
 class Wolf(animal):
     def __init__(self,name,age,sex,kol):
