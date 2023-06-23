@@ -1,15 +1,14 @@
-#Создайте класс на тему животных. В классе должен присутствовать конструктор не менее трёх методов.
+#В наследниках класса из предыдущего урока переопределить методы из класса родителя,
+#а также добавить не менее трёх значений по умолчанию.
 from classes import animal,Wolf,Cat,Dog
-wolf=Wolf("wolf",7,"мужской",5)
+wolf=Wolf("wolf",7,"мужской")
 cat=Cat("cat",9,"женский")
 dog=Dog("dog",3,"мужской")
 wolf._info()
-wolf.move(55)
-wolf._animal__massa()
-wolf.staya()
-cat._info()
-cat.sleep()
-dog._info()
-dog.run()
+dog1=Dog()
+dog1._info()
+wolf._Wolf__massa()
+cat1=Cat(name="Britanec",sex="женский")
+cat1._info()
 
 
