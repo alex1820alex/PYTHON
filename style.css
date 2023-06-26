@@ -1,10 +1,10 @@
-h1,h2,h3 {
-text-align: center;
+.odd {
+color:red
 }
-h2 {
-color: blue;
+.eve {
+color:green
 }
-h3 {
-font-size: 16px;
-color: red;
+.eee {
+color:red;
 }
+
