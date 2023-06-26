@@ -1,12 +1,10 @@
-p {
-font: 13px/20px Times New Roman;
+h1,h2,h3 {
+text-align: center;
 }
-p {
-width: 300px;
+h2 {
+color: blue;
+}
+h3 {
+font-size: 16px;
 color: red;
-font:bold 40px Arial;
-}
-p {
-font:italic bold 40px/60px  Arial;
-text-indent: 50px;
 }
