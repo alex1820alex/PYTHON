@@ -1,10 +1,11 @@
-.odd {
+#elem1{
 color:red
 }
-.eve {
+#elem2{
 color:green
 }
-.eee {
-color:red;
+#elem3{
+color:blue
 }
+
 
